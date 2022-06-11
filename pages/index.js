@@ -16,9 +16,10 @@ export default function Home() {
     <div>
       <div className="h-screen flex flex-col">
         <CalenderHeader ctx={GlobalContext} />
-        {/* <div className="flex flex-1"></div> */}
-        <Sidebar />
-        <Month month={curMonth} />
+        <div className="flex  flex-1">
+          <Sidebar />
+          <Month month={curMonth} />
+        </div>
       </div>
     </div>
   );
