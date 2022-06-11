@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import Image from "next/image";
 import dayjs from "dayjs";
-function CalenderHeader({ ctx }) {
-  const { monthIndex, setMonthIndex } = useContext(ctx);
+import GlobalContext from "../context/GlobalContext";
+
+function CalenderHeader() {
+  const { monthIndex, setMonthIndex } = useContext(GlobalContext);
   function handlePrevMonth() {
     setMonthIndex(monthIndex - 1);
   }

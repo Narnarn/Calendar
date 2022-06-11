@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <div className="h-screen flex flex-col">
-        <CalenderHeader ctx={GlobalContext} />
+        <CalenderHeader />
         <div className="flex  flex-1">
           <Sidebar />
           <Month month={curMonth} />
