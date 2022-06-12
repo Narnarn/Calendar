@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Image from "next/image";
+import GlobalContext from "../context/GlobalContext";
 function CreateEventButton() {
+  const { setShowEventModal } = useContext(GlobalContext);
   return (
-    <button className="border p-2 rounded-full flex items-center shadow-md hover:shadow-2xl">
+    <button
+      onClick={() => setShowEventModal(true)}
+      className="border p-2 rounded-full flex items-center shadow-md hover:shadow-2xl"
+    >
       <Image
         src="/plus.svg"
         alt="create event"
